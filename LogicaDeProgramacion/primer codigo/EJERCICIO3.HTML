@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logica de Programación</title>
+</head>
+<body>
+<h1>PROGRAMA SORTEO</h1>    
+    <script>
+
+
+function saltarLinea() {
+    document.write("<br>");
+    document.write("<br>");
+    document.write("<br>");
+}
+
+function imprimir(texto) {
+     document.write(texto);
+     saltarLinea();
+}
+
+function sorteo(n) {
+    return Math.round(Math.random()*n)
+}
+
+var numeroPensado = sorteo(10);
+var numeroLanzado = parseInt(prompt("Ingresa un numero entre 0-10"));
+
+//if necesita recibir una operacion logica dentro de los parentesis
+if (numeroPensado == numeroLanzado) {
+    imprimir("Usted acerto")
+
+}
+
+else {
+    imprimir("usted erró, el número pensado era " + numeroPensado)
+}
+//Math.round redondea a entero el numero decimal
+//Math.random arroga numeros aleatoreos
+    </script>
+
+
+</body>
+</html>

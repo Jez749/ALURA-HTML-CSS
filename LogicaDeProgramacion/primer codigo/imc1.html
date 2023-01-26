@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logica de Programación</title>
+</head>
+<body>
+    <h1>Cacular peso de masa corporal</h1>
+    
+    <script>
+//una o mas instrucciónes pueden estar dentro de la funcion
+        function saltarLinea() {
+            document.write("<br>");
+            document.write("<br>");
+            document.write("<br>");
+        }
+
+        function imprimir(texto) {
+            document.write(texto);
+            saltarLinea();
+        }
+
+        function calcularImc(peso,altura) {
+
+            imc = peso / (altura * altura);
+            return imc;
+            
+
+        }
+        //prompt le permite al usuario ingrasar valores que pueden ser calculados despues por una funcion, etc..
+        nombre = prompt("informe su nombre");
+        pesoInformado = prompt(nombre + ", Informe su peso");
+        alturaInformada = prompt(nombre + ", informe su altura");
+
+        imcCalculado = calcularImc(pesoInformado,alturaInformada);
+
+        imprimir(nombre + ", El Imc calculado es: " + imcCalculado);
+
+        var imcJez = calcularImc(89,1.69);
+        var imcFlp = calcularImc(70,1.70); 
+        
+       // imprimir("El imc de Jezreel y Felipe es: " + (imcJez + imcFlp)/2);
+
+    
+       if (imcCalculado < 18.5) {
+        imprimir("IMC Abajo de lo recomendado")
+       }
+
+       if (imcCalculado >= 18.5) {
+        if (imcCalculado < 25)
+        imprimir("IMC dentro del intervalo normal")
+       }
+
+      if (imcCalculado >= 25) {
+        if (imcCalculado < 30)
+      imprimir("IMC considerado sobre peso")
+      }
+
+       if (imcCalculado >= 30) {
+        imprimir("IMC considerado obedidad")
+       }
+
+
+    </script>
+
+
+</body>
+</html>

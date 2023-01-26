@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logica de Programación</title>
+</head>
+<body>
+<h1>Tabla de multiplicar</h1>    
+    <script>
+
+
+        function saltarLinea() {
+            document.write("<br>");
+            document.write("<br>");
+            document.write("<br>");
+        }
+
+        function imprimir(texto) {
+            document.write(texto);
+            saltarLinea();
+        }
+var multiplicador = 1
+var numero = parseInt(prompt("Ingresa la Tabla que quieras saber"))
+
+imprimir("WHILE")
+   while (multiplicador <= 10) {
+    imprimir(numero * multiplicador);
+    multiplicador++
+   }
+//esto es lo mismo que arriba
+imprimir("FOR")
+for (var multiplicador =1; multiplicador <=10; multiplicador = multiplicador +1){
+    imprimir(numero * multiplicador);
+}
+
+/*La declaración for se divide en tres partes que están separadas por un punto y coma.
+La primera se usa para declarar la variable que usaremos como contador, 
+la segunda para la condición de repetición y 
+la última para el incremento de la variable contador.
+De hecho, cuando queremos incrementar uno por uno, podemos usar el incremento posterior:
+for( var contador = 1; contador <= 10; contador++ ) {
+alert("Contador actual: " + contador);
+}COPIA EL CÓDIGO
+Ten en cuenta que usamos contador++ en lugar de contador=contador + 1. La primera forma es mucho más ágil.
+*/
+
+
+    </script>
+
+
+</body>
+</html>
